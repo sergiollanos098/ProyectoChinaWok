@@ -1,0 +1,216 @@
+service: chinawok-serverless
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  stage: dev
+  environment:
+    TABLE_ORDERS: ChinaWokDB
+    TABLE_CUSTOMERS: ChinaWokCustomers
+    SFN_ARN: ${self:resources.Outputs.StateMachineArn.Value}
+    AUDIT_BUCKET: chinawok-auditoria-sl-2025
+  
+  # Roles IAM para que las Lambdas tengan permiso de todo
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+          Resource: 
+            - !GetAtt ChinaWokOrdersTable.Arn
+            - !GetAtt ChinaWokCustomersTable.Arn
+        - Effect: Allow
+          Action:
+            - states:StartExecution
+            - states:SendTaskSuccess
+          Resource: "*"
+        - Effect: Allow
+          Action:
+            - events:PutEvents
+          Resource: "*"
+        - Effect: Allow
+          Action:
+            - s3:PutObject
+          Resource: "arn:aws:s3:::${self:provider.environment.AUDIT_BUCKET}/*"
+
+plugins:
+  - serverless-step-functions
+
+functions:
+  # 1. Iniciar Pedido
+  createOrder:
+    handler: src/orders.createOrder
+    events:
+      - http:
+          path: /order
+          method: post
+          cors: true
+
+  # 2. Consultar Pedidos (Cliente/Cocina)
+  getOrders:
+    handler: src/orders.getOrders
+    events:
+      - http:
+          path: /orders
+          method: get
+          cors: true
+
+  # 3. Completar Tarea Humana (Cocina/Delivery)
+  completeTask:
+    handler: src/workflow.completeTask
+    events:
+      - http:
+          path: /task
+          method: post
+          cors: true
+
+  # 4. Helper Interno (Step Functions lo llama)
+  helper:
+    handler: src/workflow.helper
+
+  # 5. Perfil de Usuario (Direcciones)
+  profile:
+    handler: src/users.profile
+    events:
+      - http:
+          path: /profile
+          method: get
+          cors: true
+      - http:
+          path: /profile
+          method: post
+          cors: true
+
+  # 6. Auditoría (EventBridge -> S3)
+  audit:
+    handler: src/audit.handler
+    events:
+      - eventBridge:
+          pattern:
+            source:
+              - chinawok.workflow
+            detail-type:
+              - PedidoFinalizado
+
+stepFunctions:
+  stateMachines:
+    ChinaWokWorkflow:
+      name: ChinaWokWorkflow
+      definition:
+        Comment: "Flujo de Pedido ChinaWok con Interacción Humana"
+        StartAt: RecibirPedido
+        States:
+          RecibirPedido:
+            Type: Pass
+            Next: EsperarCocinero
+          EsperarCocinero:
+            Type: Task
+            Resource: arn:aws:states:::lambda:invoke.waitForTaskToken
+            Parameters:
+              FunctionName: !GetAtt HelperLambdaFunction.Arn
+              Payload:
+                token.$: "$$.Task.Token"
+                orderId.$: "$.orderId"
+                tenantId.$: "$.tenantId"
+                items.$: "$.items"
+                total.$: "$.total"
+                customer.$: "$.customer"
+                status: "EN_COCINA"
+                step: "cook"
+            Next: EsperarEmpaquetador
+          EsperarEmpaquetador:
+            Type: Task
+            Resource: arn:aws:states:::lambda:invoke.waitForTaskToken
+            Parameters:
+              FunctionName: !GetAtt HelperLambdaFunction.Arn
+              Payload:
+                token.$: "$$.Task.Token"
+                orderId.$: "$.orderId"
+                tenantId.$: "$.tenantId"
+                status: "EMPACADO"
+                step: "pack"
+            Next: EsperarRepartidor
+          EsperarRepartidor:
+            Type: Task
+            Resource: arn:aws:states:::lambda:invoke.waitForTaskToken
+            Parameters:
+              FunctionName: !GetAtt HelperLambdaFunction.Arn
+              Payload:
+                token.$: "$$.Task.Token"
+                orderId.$: "$.orderId"
+                tenantId.$: "$.tenantId"
+                status: "EN_CAMINO"
+                step: "drive"
+            Next: PedidoEntregado
+          PedidoEntregado:
+            Type: Task
+            Resource: arn:aws:states:::lambda:invoke
+            Parameters:
+              FunctionName: !GetAtt HelperLambdaFunction.Arn
+              Payload:
+                orderId.$: "$.orderId"
+                tenantId.$: "$.tenantId"
+                status: "ENTREGADO"
+                token: "FINAL"
+            End: true
+
+resources:
+  Resources:
+    ChinaWokOrdersTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ChinaWokDB
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - AttributeName: tenantId
+            AttributeType: S
+          - AttributeName: orderId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: tenantId
+            KeyType: HASH
+          - AttributeName: orderId
+            KeyType: RANGE
+
+    ChinaWokCustomersTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ChinaWokCustomers
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - AttributeName: userId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: userId
+            KeyType: HASH
+
+    AuditBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:provider.environment.AUDIT_BUCKET}
+
+    CognitoUserPool:
+      Type: AWS::Cognito::UserPool
+      Properties:
+        UserPoolName: ChinaWokUsers
+        AutoVerifiedAttributes:
+          - email
+
+    CognitoUserPoolClient:
+      Type: AWS::Cognito::UserPoolClient
+      Properties:
+        ClientName: ChinaWokWebClient
+        UserPoolId: !Ref CognitoUserPool
+        GenerateSecret: false
+
+  Outputs:
+    StateMachineArn:
+      Value:
+        Ref: ChinaWokWorkflow
