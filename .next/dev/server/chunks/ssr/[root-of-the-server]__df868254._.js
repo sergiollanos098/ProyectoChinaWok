@@ -31,17 +31,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$api$2e$ts__$5b$app$2d
 ;
 const ordersService = {
     async createOrder (data, tenantId) {
-        const res = await fetch("https://1qvyjv74r3.execute-api.us-east-1.amazonaws.com/dev/orders", {
+        const res = await fetch(`${__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$api$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["API_ORDERS"]}/orders`, {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "x-tenant-id": tenantId
-            },
+            headers: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$api$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getTenantHeaders"])(tenantId),
             body: JSON.stringify(data)
         });
-        if (!res.ok) {
-            throw new Error(`Error HTTP: ${res.status}`);
-        }
         return res.json();
     },
     async getOrdersByCustomer (customerId, tenantId) {

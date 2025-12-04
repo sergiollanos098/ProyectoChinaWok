@@ -1,102 +1,126 @@
-[00:00:10.482] Server  LOG      ✓ Ready in 9s
-[00:00:13.531] Server  LOG      ○ Compiling / ...
-[00:00:16.821] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:16.821] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <RootLayout>
-                        <html lang="en">
-                          <body
-                            className="font-sans antialiased min-h-screen flex flex-col"
--                           __processed_9ec2c91f-21b8-4d08-b455-0b7ec7aeed57__="true"
-                          >
-                  ...
-
-[00:00:17.522] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:17.522] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764679935962}
-[00:00:23.899] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/checkout/cart color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/checkout/cart","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764679942310}
-[00:00:31.489] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/menu color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/menu","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764679949912}
-[00:00:34.511] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/checkout/cart color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/checkout/cart","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764679952935}
-[00:03:24.675] Server  LOG      ✓ Compiled in 221ms
-[00:03:25.428] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:03:26.531] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/checkout/..." notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <script>
-                      <RootLayout>
-                        <html lang="en">
-                          <body
-                            className="font-sans antialiased min-h-screen flex flex-col"
--                           __processed_3a422774-4ce3-4332-8270-5fdc3423a2b2__="true"
-                          >
-                  ...
-
-[00:03:26.531] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:03:26.531] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/checkout/cart color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/checkout/cart","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764680124055}
-[00:03:33.408] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764680131813}
-[00:03:37.855] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/checkout/cart color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/checkout/cart","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764680136292}
-[00:03:44.893] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/menu color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/menu","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764680143319}
-[00:09:12.319] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/customer/account/login color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/customer/account/login","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764680470730}
-[00:11:14.370] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/checkout/cart color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/checkout/cart","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764680592800}
-[00:11:16.205] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/checkout color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/checkout","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764680594636}
-[00:11:39.012] Browser ERROR   Error creating order: {}
-[00:14:02.923] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/tracking/order/index color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/tracking/order/index","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764680761362}
-[00:14:06.463] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/orders color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/orders","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764680764901}
-[00:14:06.600] Browser ERROR   Error fetching orders: {}
-[00:14:06.812] Browser ERROR   Error fetching orders: {}
-[00:14:13.345] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/locales color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/locales","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764680771764}
-[00:14:21.616] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/menu color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/menu","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764680780049}
-[00:36:37.287] Server  LOG      ✓ Compiled in 79ms
-[00:36:42.104] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/checkout/cart color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/checkout/cart","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764682120542}
-[00:36:43.111] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/checkout color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/checkout","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764682121547}
-[00:36:49.406] Browser ERROR   Error creating order: {}
+[00:00:01.422] Server  LOG      ✓ Ready in 977ms
+[00:00:21.050] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:21.247] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:21.247] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764853070504}
+[00:00:22.221] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:22.230] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:22.234] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:22.235] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:22.237] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:22.238] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:22.241] Server  ERROR    ⨯ Error: Page "/[slug]/page" is missing param "/[slug]" in "generateStaticParams()", which is required with "output: export" config.
+[00:00:25.608] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:25.741] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:25.741] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/customer/account color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/customer/account","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764853074985}
+[00:00:26.109] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:26.110] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:26.111] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:26.112] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:26.112] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:26.113] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:26.113] Server  ERROR    ⨯ Error: Page "/[slug]/page" is missing param "/[slug]" in "generateStaticParams()", which is required with "output: export" config.
+[00:00:29.024] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:00:29.024] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/orders color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/orders","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764853078270}
+[00:00:29.500] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:29.501] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:29.501] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:29.502] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:29.503] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:29.504] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:00:29.505] Server  ERROR    ⨯ Error: Page "/[slug]/page" is missing param "/[slug]" in "generateStaticParams()", which is required with "output: export" config.
+[00:02:38.231] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/menu color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/menu","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764853207480}
+[00:02:38.620] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:38.621] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:38.621] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:38.622] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:38.622] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:38.623] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:38.624] Server  ERROR    ⨯ Error: Page "/[slug]/page" is missing param "/[slug]" in "generateStaticParams()", which is required with "output: export" config.
+[00:02:44.592] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/checkout/cart color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/checkout/cart","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764853213835}
+[00:02:45.040] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:45.041] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:45.042] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:45.042] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:45.043] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:45.043] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:45.044] Server  ERROR    ⨯ Error: Page "/[slug]/page" is missing param "/[slug]" in "generateStaticParams()", which is required with "output: export" config.
+[00:02:48.284] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/checkout color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/checkout","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764853217535}
+[00:02:48.730] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:48.731] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:48.731] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:48.732] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:48.732] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:48.733] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:02:48.734] Server  ERROR    ⨯ Error: Page "/[slug]/page" is missing param "/[slug]" in "generateStaticParams()", which is required with "output: export" config.
+[00:06:19.569] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/orders color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/orders","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764853428821}
+[00:06:19.962] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:19.964] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:19.964] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:19.965] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:19.965] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:19.966] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:19.967] Server  ERROR    ⨯ Error: Page "/[slug]/page" is missing param "/[slug]" in "generateStaticParams()", which is required with "output: export" config.
+[00:06:25.354] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/menu color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/menu","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764853434601}
+[00:06:25.734] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:25.737] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:25.738] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:25.738] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:25.739] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:25.739] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:25.740] Server  ERROR    ⨯ Error: Page "/[slug]/page" is missing param "/[slug]" in "generateStaticParams()", which is required with "output: export" config.
+[00:06:27.778] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/checkout/cart color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/checkout/cart","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764853437022}
+[00:06:28.178] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:28.179] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:28.180] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:28.180] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:28.181] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:28.181] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:28.183] Server  ERROR    ⨯ Error: Page "/[slug]/page" is missing param "/[slug]" in "generateStaticParams()", which is required with "output: export" config.
+[00:06:28.960] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/checkout color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/checkout","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764853438214}
+[00:06:29.352] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:29.353] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:29.354] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:29.355] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:29.356] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:29.357] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:29.358] Server  ERROR    ⨯ Error: Page "/[slug]/page" is missing param "/[slug]" in "generateStaticParams()", which is required with "output: export" config.
+[00:06:33.073] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/orders color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/orders","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764853442321}
+[00:06:33.462] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:33.463] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:33.464] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:33.464] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:33.465] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:33.465] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:06:33.466] Server  ERROR    ⨯ Error: Page "/[slug]/page" is missing param "/[slug]" in "generateStaticParams()", which is required with "output: export" config.
+[00:24:37.826] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/menu color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/menu","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764854527062}
+[00:24:38.942] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:38.944] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:38.945] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:38.947] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:38.948] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:38.950] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:38.951] Server  ERROR    ⨯ Error: Page "/[slug]/page" is missing param "/[slug]" in "generateStaticParams()", which is required with "output: export" config.
+[00:24:43.848] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/checkout/cart color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/checkout/cart","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764854533100}
+[00:24:44.616] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:44.616] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:44.617] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:44.619] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:44.620] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:44.620] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:44.622] Server  ERROR    ⨯ Error: Page "/[slug]/page" is missing param "/[slug]" in "generateStaticParams()", which is required with "output: export" config.
+[00:24:49.127] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/checkout color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/checkout","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764854538381}
+[00:24:49.977] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:49.979] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:49.982] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:49.982] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:49.983] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:49.984] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:24:49.985] Server  ERROR    ⨯ Error: Page "/[slug]/page" is missing param "/[slug]" in "generateStaticParams()", which is required with "output: export" config.
+[00:27:38.653] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/orders color: rgb(120, 120, 120) color: inherit {"o":"http://localhost:3000/orders","sdkn":"@vercel/analytics/react","sdkv":"1.5.0","sv":"0.1.3","ts":1764854707900}
+[00:27:39.590] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:27:39.592] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:27:39.593] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:27:39.594] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:27:39.596] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:27:39.597] Server  ERROR   C:\Users\vcarrera\Desktop\chinawok-frontend\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:27:39.598] Server  ERROR    ⨯ Error: Page "/[slug]/page" is missing param "/[slug]" in "generateStaticParams()", which is required with "output: export" config.

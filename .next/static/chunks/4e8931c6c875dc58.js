@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,4563,t=>{"use strict";var i=t.i(43476),o=t.i(34286);function u(){return(0,i.jsx)(o.Authenticator,{})}t.s(["AuthTabs",()=>u])}]);

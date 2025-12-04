@@ -1,11 +1,9 @@
 {
   "/[slug]/page": "app/[slug]/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/checkout/cart/page": "app/checkout/cart/page.js",
   "/checkout/page": "app/checkout/page.js",
-  "/customer/account/login/page": "app/customer/account/login/page.js",
-  "/locales/page": "app/locales/page.js",
   "/menu/page": "app/menu/page.js",
   "/orders/page": "app/orders/page.js",
-  "/page": "app/page.js",
-  "/tracking/order/index/page": "app/tracking/order/index/page.js"
+  "/page": "app/page.js"
 }

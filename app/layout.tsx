@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer"
 import { Analytics } from "@vercel/analytics/react"
 import { TenantProvider } from "@/lib/context/tenant-context"
 import { CartProvider } from "@/lib/context/cart-context"
+import ConfigureAmplifyClientSide from "@/components/auth/configure-amplify-client-side"
 
 export default function RootLayout({
   children,
@@ -15,6 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`font-sans antialiased min-h-screen flex flex-col`}>
         <TenantProvider>
+          <ConfigureAmplifyClientSide />
           <CartProvider>
             <Header />
             <main className="flex-1">{children}</main>

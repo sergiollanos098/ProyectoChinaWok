@@ -1,0 +1,15 @@
+{
+  "/[slug]/page": "/[slug]",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/checkout/cart/page": "/checkout/cart",
+  "/checkout/page": "/checkout",
+  "/contact/page": "/contact",
+  "/customer/account/login/page": "/customer/account/login",
+  "/dashboard/page": "/dashboard",
+  "/locales/page": "/locales",
+  "/menu/page": "/menu",
+  "/orders/page": "/orders",
+  "/page": "/",
+  "/tracking/order/index/page": "/tracking/order/index"
+}
